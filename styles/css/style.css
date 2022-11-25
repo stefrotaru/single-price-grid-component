@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  height: 100vh;
+  background-color: #e5eff5;
+  display: grid;
+  align-items: center; }
+
+.container {
+  font-family: "Karla", sans-serif; }
+
+.grid {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0.5fr, 1fr));
+  grid-template-columns: repeat(2, 30%);
+  place-content: center; }
+  .grid__row {
+    grid-row: 1;
+    grid-column: 1 / 3;
+    background-color: white;
+    padding: 2.5rem;
+    line-height: 1.5rem;
+    border-radius: .5rem .5rem 0 0; }
+    .grid__row__title {
+      color: #2ab2af;
+      font-size: 1.5rem; }
+    .grid__row__subtitle {
+      color: #c0df34;
+      font-size: 1rem;
+      padding-block-start: 1rem;
+      padding-block-end: .5rem; }
+    .grid__row__description {
+      color: #98a6bd; }
+  .grid__column-first {
+    grid-row: 2;
+    background-color: #27a5a3;
+    border-radius: 0 0 0 .5rem;
+    color: white;
+    padding: 2.5rem; }
+    .grid__column-first__title {
+      font-weight: 400;
+      font-size: 1.2rem;
+      padding-bottom: 1rem; }
+    .grid__column-first__price {
+      font-size: 2.5rem;
+      padding-bottom: .5rem; }
+    .grid__column-first__price > span {
+      font-size: 1rem;
+      color: #d0e1ec;
+      position: relative;
+      bottom: .5rem; }
+    .grid__column-first__button-box {
+      display: flex;
+      flex-direction: column; }
+    .grid__column-first__button {
+      margin-block-start: 2rem;
+      padding-block: 1rem;
+      background-color: #c0df34;
+      box-shadow: 0px 5px 21px -3px rgba(0, 0, 0, 0.3);
+      border: none;
+      border-radius: .3rem;
+      color: #e5eff5;
+      font-family: "Karla", sans-serif;
+      font-weight: 700; }
+  .grid__column-second {
+    grid-row: 2;
+    background-color: #2ab2af;
+    border-radius: 0 0 .5rem 0;
+    color: whitesmoke;
+    padding: 2.5rem; }
+    .grid__column-second__description-ul {
+      list-style: none;
+      line-height: 1.3rem;
+      font-size: .8rem;
+      font-weight: 400;
+      color: #d0e1ec; }
+
+@media (max-width: 790px) {
+  body {
+    padding-top: 10rem; }
+  .grid {
+    height: 90vh;
+    max-width: 90%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    margin-inline-start: 5vw; }
+    .grid__row {
+      grid-row: 1;
+      grid-column: 1;
+      text-align: start; }
+    .grid__column-first {
+      grid-row: 2;
+      grid-column: 1;
+      border-radius: 0;
+      text-align: start; }
+    .grid__column-second {
+      grid-row: 3;
+      grid-column: 1;
+      border-radius: 0 0 .5rem .5rem;
+      text-align: start; } }
